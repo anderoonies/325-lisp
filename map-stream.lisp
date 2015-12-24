@@ -1,0 +1,6 @@
+(defun map-stream (fn str)
+  (do ((expression (read str nil "'")
+                   (read str nil "'")))
+    ((equal expression "'"))
+    (print expression)
+    (funcall fn expression)))
